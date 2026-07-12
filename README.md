@@ -1,4 +1,4 @@
-# My Claude Code SKILLS
+# Claude Plugins
 
 Colección curada de Skills, Agentes e instrucciones de proyecto (`CLAUDE.md`) para [Claude Code](https://claude.com/claude-code), recopilada y verificada (seguridad, confiabilidad y usabilidad) principalmente desde el catálogo de [aitmpl.com](https://www.aitmpl.com/).
 
