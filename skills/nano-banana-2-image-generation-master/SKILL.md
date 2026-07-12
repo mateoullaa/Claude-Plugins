@@ -1,5 +1,5 @@
 ---
-name: Nano Banana 2 Image Generation Master
+name: nano-banana-2-image-generation-master
 description: A formalized skill for generating hyper-realistic, highly-controlled images using the Nano Banana 2 (Gemini 3.1 Flash) model through parameterized JSON prompting.
 ---
 

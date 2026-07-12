@@ -4,15 +4,17 @@ Colección curada de Skills, Agentes e instrucciones de proyecto (`CLAUDE.md`) p
 
 ## Estructura
 
-Cada carpeta de nivel superior agrupa un tipo de componente. Dentro, los ítems están organizados en subcarpetas por categoría de uso, y cada uno vive en su propia carpeta `"<Nombre> - <tipo>.md"` conteniendo un único archivo con ese nombre exacto.
+Cada carpeta de nivel superior está lista para instalar directamente, en el formato exacto que espera Claude Code:
 
-- **`SKILLS.md/`** — Skills de Claude Code (`SKILL.md`), agrupadas en: Desarrollo de Software, Diseño y UI-UX, Datos y Analítica, Marketing y Contenido, Multimedia y Creación Visual, Automatización y Productividad.
-- **`AGENTS.md/`** — Definiciones de subagentes (`AGENT.md`), agrupadas en: Desarrollo de Software, Datos e IA, Documentación, Seguridad, Diseño y Producto, Gestión de Contexto y Orquestación.
-- **`CLAUDE.md/`** — Instrucciones de proyecto/agente (`CLAUDE.md`), agrupadas en: Frameworks y Arquitectura, Diseño y Estilo.
+- **`skills/<nombre>/SKILL.md`** — 29 Skills. Cada carpeta se llama igual que el `name:` del frontmatter (minúsculas y guiones).
+- **`agents/<nombre>.md`** — 14 definiciones de subagentes, un archivo suelto por agente.
+- **`CLAUDE.md/<nombre>/CLAUDE.md`** — 3 instrucciones de proyecto/agente, cada una pensada para copiarse como `CLAUDE.md` en la raíz de un proyecto puntual (no se instalan en batch como las skills/agentes).
 
-## Uso
+## Instalación
 
-Para usar un elemento, copiá su archivo (`SKILL.md`, `AGENT.md` o `CLAUDE.md`) a la ubicación correspondiente de tu proyecto o configuración de Claude Code (`.claude/skills/`, `.claude/agents/`, o la raíz del proyecto para `CLAUDE.md`).
+- **Global** (todos tus proyectos): copiá el contenido de `skills/` a `~/.claude/skills/` y el de `agents/` a `~/.claude/agents/`.
+- **Por proyecto**: copiá solo las skills/agentes que apliquen a `<proyecto>/.claude/skills/` y `<proyecto>/.claude/agents/`.
+- **CLAUDE.md**: copiá el archivo de `CLAUDE.md/<nombre>/CLAUDE.md` que corresponda a la raíz del proyecto donde querés que aplique.
 
 ## Nota
 
