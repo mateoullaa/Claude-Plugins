@@ -28,46 +28,49 @@ User says: "session handoff", "wrap up session", "hand off", "handoff summary", 
 
 ## Output template — use exactly this structure, every time
 
+The handoff itself must be written **in Spanish** (español) — headers, prose, and all content below. Use the exact section headers shown here (already translated); only the placeholders get filled in.
+
 ```
-# Session Handoff — <one-line title of what this session was about>
+# Handoff de Sesión — <título de una línea sobre el tema de la sesión>
 
-## Where it started
-<2-3 sentences: what the user asked for, key framing or constraints that emerged>
+## Cómo arrancó
+<2-3 oraciones: qué pidió el usuario, marco o restricciones clave que surgieron>
 
-## Decisions locked + what shipped
-- <decision or change> — <why, and where it lives (absolute path if a file)>
+## Decisiones cerradas + qué se entregó
+- <decisión o cambio> — <por qué, y dónde vive (ruta absoluta si es un archivo)>
 - ...
 
-## Key files for next session
-- `<absolute path>` — <why the next agent should read this first>
-- Plan file: `<path>` (if a plan drove the session)
-- Memory files touched: `<paths>` (if any)
+## Archivos clave para la próxima sesión
+- `<ruta absoluta>` — <por qué el próximo agente debería leer esto primero>
+- Archivo de plan: `<ruta>` (si un plan guió la sesión)
+- Archivos de memoria tocados: `<rutas>` (si aplica)
 
-## Running state
-- Background processes: <shell IDs + what they are + how to kill> — or "none"
-- Dev servers / ports: <url + port> — or "none"
-- Open worktrees / branches: <paths> — or "none"
+## Estado en ejecución
+- Procesos en background: <IDs de shell + qué son + cómo matarlos> — o "ninguno"
+- Servidores de desarrollo / puertos: <url + puerto> — o "ninguno"
+- Worktrees / branches abiertos: <rutas> — o "ninguno"
 
-## Verification — how to confirm things still work
-- `<command>` — <expected outcome>
+## Verificación — cómo confirmar que todo sigue funcionando
+- `<comando>` — <resultado esperado>
 - ...
 
-## Deferred + open questions
-- Deferred: <item> — <why pushed to later>
-- Open: <question needing the user's input> — <context>
+## Diferido + preguntas abiertas
+- Diferido: <ítem> — <por qué se pospuso>
+- Abierto: <pregunta que necesita input del usuario> — <contexto>
 
-## Pick up here
-<1-2 sentences: the single most likely next action for a fresh agent>
+## Por dónde seguir
+<1-2 oraciones: la acción siguiente más probable para un agente nuevo>
 ```
 
 ## Hard rules
 
 1. **Chat output only.** Never write the handoff to a file. Never update memory from this skill.
-2. **Never invent state.** If a section has nothing to report, write "none" — do not omit the section. Structure stability is the whole point.
-3. **Absolute paths always.** The next agent may have a different working directory.
-4. **If a plan file drove the session, name it first** in "Key files" so the next agent reads it before anything else.
-5. **No emojis, no hype, no "great job" summaries.** Terse and concrete — paths, commands, shell IDs, decisions. Match the tone of a seasoned engineer handing off at end-of-shift.
-6. **Background process IDs are critical.** If you started any `run_in_background` shells, their IDs must appear in "Running state" with the kill command — the next agent cannot find them otherwise.
+2. **Write the handoff in Spanish (español).** Headers, prose, and all narrative content — use the template above verbatim. Code, commands, paths, and shell IDs stay as-is (don't translate those).
+3. **Never invent state.** If a section has nothing to report, write "none" — do not omit the section. Structure stability is the whole point.
+4. **Absolute paths always.** The next agent may have a different working directory.
+5. **If a plan file drove the session, name it first** in "Key files" so the next agent reads it before anything else.
+6. **No emojis, no hype, no "great job" summaries.** Terse and concrete — paths, commands, shell IDs, decisions. Match the tone of a seasoned engineer handing off at end-of-shift.
+7. **Background process IDs are critical.** If you started any `run_in_background` shells, their IDs must appear in "Running state" with the kill command — the next agent cannot find them otherwise.
 
 ## Anti-patterns — do not do these
 
