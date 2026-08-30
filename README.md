@@ -6,7 +6,7 @@ Colección curada de Skills, Agentes e instrucciones de proyecto (`CLAUDE.md`) p
 
 Cada carpeta de nivel superior está lista para instalar directamente, en el formato exacto que espera Claude Code:
 
-- **`skills/<nombre>/SKILL.md`** — 29 Skills. Cada carpeta se llama igual que el `name:` del frontmatter (minúsculas y guiones).
+- **`skills/<nombre>/SKILL.md`** — 32 Skills. Cada carpeta se llama igual que el `name:` del frontmatter (minúsculas y guiones). La mayoría es un único `SKILL.md`; algunas (`scrollcraft`) traen además recursos propios (`scripts/`, `references/`, `engine/`, `templates/`) que se copian junto con la carpeta.
 - **`agents/<nombre>.md`** — 14 definiciones de subagentes, un archivo suelto por agente.
 - **`CLAUDE.md/<nombre>/CLAUDE.md`** — 3 instrucciones de proyecto/agente, cada una pensada para copiarse como `CLAUDE.md` en la raíz de un proyecto puntual (no se instalan en batch como las skills/agentes).
 
